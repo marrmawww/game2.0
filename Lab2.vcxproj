@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BE5E5A3A-81BE-4340-A715-4DA425E27DFF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Lab2</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir>$(SolutionDir)out\$(ProjectName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)out\obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName>lab2</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)app;$(ProjectDir)core;$(ProjectDir)units;$(ProjectDir)factories;$(ProjectDir)terrain;$(ProjectDir)neutral;$(ProjectDir)patterns;$(ProjectDir)logging;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)app;$(ProjectDir)core;$(ProjectDir)units;$(ProjectDir)factories;$(ProjectDir)terrain;$(ProjectDir)neutral;$(ProjectDir)patterns;$(ProjectDir)logging;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="logging/Logger.cpp" />
+    <ClCompile Include="units/Unit.cpp" />
+    <ClCompile Include="units/UnitKind.cpp" />
+    <ClCompile Include="factories/UnitFactory.cpp" />
+    <ClCompile Include="terrain/TerrainProxy.cpp" />
+    <ClCompile Include="terrain/TerrainMap.cpp" />
+    <ClCompile Include="neutral/Strategies.cpp" />
+    <ClCompile Include="core/Base.cpp" />
+    <ClCompile Include="core/GameController.cpp" />
+    <ClCompile Include="app/main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core/Base.h" />
+    <ClInclude Include="core/GameController.h" />
+    <ClInclude Include="core/Resources.h" />
+    <ClInclude Include="units/Archer.h" />
+    <ClInclude Include="units/Armor.h" />
+    <ClInclude Include="units/Attack.h" />
+    <ClInclude Include="units/Cavalry.h" />
+    <ClInclude Include="units/Elf.h" />
+    <ClInclude Include="units/Health.h" />
+    <ClInclude Include="units/Infantry.h" />
+    <ClInclude Include="units/Unit.h" />
+    <ClInclude Include="units/UnitKind.h" />
+    <ClInclude Include="factories/UnitFactory.h" />
+    <ClInclude Include="terrain/Forest.h" />
+    <ClInclude Include="terrain/Mountains.h" />
+    <ClInclude Include="terrain/Plains.h" />
+    <ClInclude Include="terrain/Swamp.h" />
+    <ClInclude Include="terrain/Terrain.h" />
+    <ClInclude Include="terrain/TerrainMap.h" />
+    <ClInclude Include="terrain/TerrainProxy.h" />
+    <ClInclude Include="neutral/Altar.h" />
+    <ClInclude Include="neutral/EnergySource.h" />
+    <ClInclude Include="neutral/InteractionStrategy.h" />
+    <ClInclude Include="neutral/NeutralObject.h" />
+    <ClInclude Include="neutral/NeutralOperators.h" />
+    <ClInclude Include="neutral/Strategies.h" />
+    <ClInclude Include="neutral/Trap.h" />
+    <ClInclude Include="neutral/TreasureChest.h" />
+    <ClInclude Include="patterns/Observer.h" />
+    <ClInclude Include="logging/Logger.h" />
+    <ClInclude Include="logging/Screen.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="README.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

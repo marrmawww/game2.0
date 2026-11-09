@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="app"><UniqueIdentifier>{1f1752bd-d3c0-44a0-bd7e-b020d8d76d51}</UniqueIdentifier></Filter>
+    <Filter Include="core"><UniqueIdentifier>{04c19505-9a74-47cc-94a3-1332add77b25}</UniqueIdentifier></Filter>
+    <Filter Include="units"><UniqueIdentifier>{3a74dcb9-f1b5-4c8f-b6f1-63da3f4b2925}</UniqueIdentifier></Filter>
+    <Filter Include="factories"><UniqueIdentifier>{cebfec5f-dd1d-45e7-9368-f7599ef68c63}</UniqueIdentifier></Filter>
+    <Filter Include="terrain"><UniqueIdentifier>{be62c62f-cd01-47cb-bc32-dda90d19e626}</UniqueIdentifier></Filter>
+    <Filter Include="neutral"><UniqueIdentifier>{e6f90e27-8941-4ed1-aa83-7875bfccbf9a}</UniqueIdentifier></Filter>
+    <Filter Include="patterns"><UniqueIdentifier>{5c28b299-ec15-4e38-a937-41a3aa0e006a}</UniqueIdentifier></Filter>
+    <Filter Include="logging"><UniqueIdentifier>{9b1b96eb-2bb0-4504-8e37-7400aea9aea9}</UniqueIdentifier></Filter>
+    <Filter Include="tests"><UniqueIdentifier>{c3f76c65-5e1c-403f-a6a3-5ae6308d00d3}</UniqueIdentifier></Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="logging/Logger.cpp"><Filter>logging</Filter></ClCompile>
+    <ClCompile Include="units/Unit.cpp"><Filter>units</Filter></ClCompile>
+    <ClCompile Include="units/UnitKind.cpp"><Filter>units</Filter></ClCompile>
+    <ClCompile Include="factories/UnitFactory.cpp"><Filter>factories</Filter></ClCompile>
+    <ClCompile Include="terrain/TerrainProxy.cpp"><Filter>terrain</Filter></ClCompile>
+    <ClCompile Include="terrain/TerrainMap.cpp"><Filter>terrain</Filter></ClCompile>
+    <ClCompile Include="neutral/Strategies.cpp"><Filter>neutral</Filter></ClCompile>
+    <ClCompile Include="core/Base.cpp"><Filter>core</Filter></ClCompile>
+    <ClCompile Include="core/GameController.cpp"><Filter>core</Filter></ClCompile>
+    <ClCompile Include="tests/tests.cpp"><Filter>tests</Filter></ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="core/Base.h"><Filter>core</Filter></ClInclude>
+    <ClInclude Include="core/GameController.h"><Filter>core</Filter></ClInclude>
+    <ClInclude Include="core/Resources.h"><Filter>core</Filter></ClInclude>
+    <ClInclude Include="units/Archer.h"><Filter>units</Filter></ClInclude>
+    <ClInclude Include="units/Armor.h"><Filter>units</Filter></ClInclude>
+    <ClInclude Include="units/Attack.h"><Filter>units</Filter></ClInclude>
+    <ClInclude Include="units/Cavalry.h"><Filter>units</Filter></ClInclude>
+    <ClInclude Include="units/Elf.h"><Filter>units</Filter></ClInclude>
+    <ClInclude Include="units/Health.h"><Filter>units</Filter></ClInclude>
+    <ClInclude Include="units/Infantry.h"><Filter>units</Filter></ClInclude>
+    <ClInclude Include="units/Unit.h"><Filter>units</Filter></ClInclude>
+    <ClInclude Include="units/UnitKind.h"><Filter>units</Filter></ClInclude>
+    <ClInclude Include="factories/UnitFactory.h"><Filter>factories</Filter></ClInclude>
+    <ClInclude Include="terrain/Forest.h"><Filter>terrain</Filter></ClInclude>
+    <ClInclude Include="terrain/Mountains.h"><Filter>terrain</Filter></ClInclude>
+    <ClInclude Include="terrain/Plains.h"><Filter>terrain</Filter></ClInclude>
+    <ClInclude Include="terrain/Swamp.h"><Filter>terrain</Filter></ClInclude>
+    <ClInclude Include="terrain/Terrain.h"><Filter>terrain</Filter></ClInclude>
+    <ClInclude Include="terrain/TerrainMap.h"><Filter>terrain</Filter></ClInclude>
+    <ClInclude Include="terrain/TerrainProxy.h"><Filter>terrain</Filter></ClInclude>
+    <ClInclude Include="neutral/Altar.h"><Filter>neutral</Filter></ClInclude>
+    <ClInclude Include="neutral/EnergySource.h"><Filter>neutral</Filter></ClInclude>
+    <ClInclude Include="neutral/InteractionStrategy.h"><Filter>neutral</Filter></ClInclude>
+    <ClInclude Include="neutral/NeutralObject.h"><Filter>neutral</Filter></ClInclude>
+    <ClInclude Include="neutral/NeutralOperators.h"><Filter>neutral</Filter></ClInclude>
+    <ClInclude Include="neutral/Strategies.h"><Filter>neutral</Filter></ClInclude>
+    <ClInclude Include="neutral/Trap.h"><Filter>neutral</Filter></ClInclude>
+    <ClInclude Include="neutral/TreasureChest.h"><Filter>neutral</Filter></ClInclude>
+    <ClInclude Include="patterns/Observer.h"><Filter>patterns</Filter></ClInclude>
+    <ClInclude Include="logging/Logger.h"><Filter>logging</Filter></ClInclude>
+    <ClInclude Include="logging/Screen.h"><Filter>logging</Filter></ClInclude>
+  </ItemGroup>
+</Project>
